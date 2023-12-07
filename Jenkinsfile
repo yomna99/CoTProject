@@ -4,7 +4,7 @@ pipeline {
     environment {
         WILDFLY_HOME = '/opt/wildfly'
         M3_HOME = '/opt/maven'
-        PROJECT_DIR = 'server'
+        PROJECT_DIR = 'code/api'
     }
     
     stages {
