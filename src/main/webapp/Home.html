@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>DriveGuardian</title>
+    <meta name="keywords" content="flatui admin template">
+    <meta name="description" content="Free flatui admin template. Download free template flatui admin template at github">
+    <meta property="og:title" content="Sign In" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="description" content="Free flatui admin template. Developed by saravanajd" />
+    <meta property="og:description" content="Free flatui admin template. Developed by saravanajd" />
+    <meta property="og:site_name" content="Admin Template" />
+    <script type="application/ld+json">
+        {
+            "name": "FlatUI Admin Template",
+            "description": "Free flatui admin template. Developed by saravanajd",
+            "@type": "WebSite",
+            "url": "https://saravanajd.github.io/FlatUI/index.html",
+            "headline": "FlatUI Admin Template"
+        }
+    </script>
+
+
+    <link rel="stylesheet" href="assets/css/app.v1.css">
+    <link rel="stylesheet" href="dist/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.v1.js"></script>
+    <script src="js/dashboard.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c8ee3dd930.js"></script>
+    <style>
+        /* Texte défilant */
+        .messagedefilant {
+            display: block;
+            margin: 40px auto;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            width: 50%;
+            max-width: 640px;
+            height: 60px;
+        }
+
+        .messagedefilant div {
+            position: absolute;
+            min-width: 100%; /* au minimum la largeur du conteneur */
+        }
+
+        .messagedefilant div span,
+        .messagedefilant div:after {
+            position: relative;
+            display: inline-block;
+            font-size: 2rem;
+            white-space: nowrap;
+            top:0;
+        }
+
+        .messagedefilant div span {
+            animation: defilement 10s infinite linear;
+            background: #cde;
+        }
+
+        .messagedefilant div:after {
+            position: absolute;
+            top:0; left:0;
+            content:attr(data-text);
+            animation: defilement2 10s infinite linear;
+            background: #edc;
+        }
+
+        @keyframes defilement {
+            0% { margin-left: 0; }
+            100% { margin-left: -100%; }
+        }
+
+        @keyframes defilement2 {
+            0% { margin-left: 100%; }
+            100% { margin-left: 0%; }
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="img">
+                <span class="logo-text">DriveGuardian</span>
+                <span class="logo-text minbar">DG</span>
+            </div>
+        </div>
+        <div class="topbar">
+            <div class="left">
+                <a class="navbar-collopse"> <i class="fa fa-bars"></i> </a>
+                <span class="topbar-title">Home</span>
+            </div>
+            <div class="right">
+                
+                <div class="topbar-btn">
+                    <span id="displayname" class="displayname">
+                        <i class="fa fa-angle-down"></i>
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <aside>
+            <nav>
+                <ul class="nav">
+                    <li class="active">
+                        <a href="Home.html">
+                            <i class="fa fa-dashboard"></i>
+                            <span class="span">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html">
+                            <i class="fa fa-map-marker"></i>
+                            <span class="span">Map</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profil.html">
+                            <i class="fa fa-users"></i>
+                            <span class="span">Profil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="notification-icon" class="waves-effect" href="./notification.html">
+                            <i class="material-icons" style="    padding-left: 50px;">notifications</i>
+                            <span class="new badge red" id="notification-badge">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="signin.html">
+                            <i class="fa fa-sign-out"></i>
+                            <span class="span">Log out</span>
+                        </a>
+                    </li>
+                </ul>
+                   
+            </nav>
+            <div class="nav-footer">
+                <a href="signin.html" class="btn btn-sm">
+                    <i class="fa fa-sign-out"></i>
+                </a>
+            </div>
+
+        </aside>
+
+
+        <div class="page-container"  >
+            <div class="messagedefilant">
+                <div data-text="Drive Safe ! Detect your drowsiness !"><span>Drive Safe! and detect your drowsiness ! </span></div>
+            </div>
+
+
+
+            <div id="sensor-data-container" class="container">
+                <!-- Les données du capteur seront affichées ici -->
+            </div>
+
+            <div class="container">
+                <div class="card">
+                    <div class="title">
+
+                    </div>
+                    <div class="content">
+                        <div class="social" style="display: flex; ">
+                           <div>
+                               <img src="assets/car.webp" style="    width: 301px;
+    height: 200px;margin-right: 50px;">
+                           </div>
+                            <div style="    margin-top: 27px;">
+                                <h5>
+                                    Driving safely is paramount for both personal well-being and the safety of others on the road. Practicing safe driving involves a combination of focused attention, adherence to traffic laws, and consideration for fellow motorists. Maintaining a safe following distance, obeying speed limits, and avoiding distractions such as texting or phone use contribute significantly to preventing accidents. Additionally, staying alert to one's surroundings, respecting traffic signals, and using seat belts are fundamental aspects of responsible driving. A commitment to avoiding reckless behaviors, such as aggressive driving or driving under the influence, further ensures the well-being of oneself and the broader community. Ultimately, driving safely is a collective responsibility that promotes a secure and harmonious environment on our roadways.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                        <div class="social" style="display: flex; padding-top: 36px;">
+                            <div>
+                                <img src="assets/img5.webp" style="    width: 301px;
+    height: 200px;margin-right: 50px;">
+                            </div>
+                            <div style="    margin-top: 27px;">
+                                <h5>
+                                    Driving safely is a crucial responsibility that demands constant attention and adherence to traffic rules. It involves staying focused on the road, avoiding distractions like phones, and obeying speed limits. Ensuring everyone's safety requires maintaining a safe following distance, using turn signals, and respecting traffic signals. Buckling up and avoiding aggressive driving behaviors contribute to a secure driving experience. Prioritizing safety not only protects the driver but also fosters a safer environment for fellow road users, promoting a culture of responsible and considerate driving.                                </h5>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="social"  style="display: flex; margin-top: 36px;">
+                            <div>
+                                <img src="assets/img6.jpg" style="width: 301px;height: 200px;margin-right: 50px;">
+                            </div>
+                            <div style="    margin-top: 27px;">
+                                <h5>
+                                    Driving safely is a crucial responsibility that demands constant attention and adherence to traffic rules. It involves staying focused on the road, avoiding distractions like phones, and obeying speed limits. Ensuring everyone's safety requires maintaining a safe following distance, using turn signals, and respecting traffic signals. Buckling up and avoiding aggressive driving behaviors contribute to a secure driving experience. Prioritizing safety not only protects the driver but also fosters a safer environment for fellow road users, promoting a culture of responsible and considerate driving.                                </h5>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+    <script src="./js/alert.js"></script>
+</body>
+
+</html>
