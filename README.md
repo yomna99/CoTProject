@@ -35,6 +35,7 @@ This project is a collaborative effort by:
 - Raspberry Pi 4
 - Camera (for image capture)
 - 12V Raspberry Pi power supply
+- ![Alt Text](imag![1](https://github.com/yomna99/CoTProject/assets/114284730/0b009d28-5a69-4a3f-af50-c166a5dfdc88)
 
 
 ## Deployment
