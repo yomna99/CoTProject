@@ -2,7 +2,7 @@
 
 ## Project Description
 
-DriveGuardian.me is an innovative application designed to enhance road safety by detecting drowsiness in drivers. Leveraging the power of IoT and computer vision, the app utilizes a Raspberry Pi camera to capture real-time images of drivers. These images are then processed using a YOLOv8 model, specifically trained on relevant data, to identify signs of somnolence. In case of detection, the app triggers an alarm to alert the driver, thereby preventing potential accidents caused by drowsy driving.
+DriveGuardian.me is an innovative application designed to enhance road safety by detecting drowsiness in drivers. Leveraging the power of IoT and computer vision, the app utilizes a Raspberry Pi camera to capture real-time images of drivers. These images are then processed using a YOLOv8 model, specifically trained on relevant data, to identify signs of somnolence. In case of detection, the app triggers an alarm to alert the driver, thereby preventing potential accidents caused by drowsy driving...
 
 ## Project Team
 
